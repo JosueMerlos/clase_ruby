@@ -7,11 +7,11 @@ class Person
   end
 
   def saludar
-    puts "Hola #{@nombre}, como estas?"
+    puts "Hola #{@nombre.strip}, como estas?"
   end
 
   def despedir
-    puts "Adios #{@nombre}, nos vemos pronto!!"
+    puts "Adios #{@nombre.strip}, nos vemos pronto!!"
   end
 end
 
@@ -23,5 +23,12 @@ puts a.despedir
 # Cambiar el nombre a "Diego"
 a.nombre = 'Diego'
 puts a.nombre
+puts a.saludar
+puts a.despedir
+
+# Nombre interactivo
+puts 'Ingrese un nuevo nombre'
+nombre = gets
+a.nombre = nombre
 puts a.saludar
 puts a.despedir
